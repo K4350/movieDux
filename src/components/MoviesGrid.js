@@ -10,9 +10,9 @@ export default function MoviesGrid() {
   const [rating, setRating] = useState("All");
 
   useEffect(() => {
-    fetch("movies.json")
+    fetch("https://api.jsonbin.io/v3/b/69162d89d0ea881f40e6a7c4")
       .then((response) => response.json())
-      .then((data) => setMovies(data));
+      .then((data) => setMovies(data.record)); // <-- FIX HERE
   }, []);
 
   const handleSearchChange = (e) => {
