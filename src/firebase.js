@@ -1,20 +1,17 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD9f0z7L6_NO_GkU0KPDhf2foxREJOr6ps",
-  authDomain: "moviedux-afb4d.firebaseapp.com",
-  projectId: "moviedux-afb4d",
-  storageBucket: "moviedux-afb4d.appspot.com",
-  messagingSenderId: "124063686050",
-  appId: "1:124063686050:web:55cc59c53329ee0707a6fb",
-  measurementId: "G-2604NN4ENLW",
+  apiKey: "AIzaSyDexQDv3DEsRBxwroxLgiQcZnbWzp2_A-Q",
+  authDomain: "moviedux-43.firebaseapp.com",
+  projectId: "moviedux-43",
+  storageBucket: "moviedux-43.firebasestorage.app",
+  messagingSenderId: "143475702382",
+  appId: "1:143475702382:web:3464a976a17a0b0fa1047f",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Export Firestore and Storage so you can use them anywhere
-export const db = getFirestore(app);
-export const storage = getStorage(app);
