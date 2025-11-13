@@ -138,5 +138,145 @@
     "image": "20.jpg",
     "genre": "horror",
     "rating": "7.4"
+  },
+  {
+    "id": 21,
+    "title": "Rise of the Forsaken",
+    "image": "21.jpg",
+    "genre": "action",
+    "rating": "8.9"
+  },
+  {
+    "id": 22,
+    "title": "Twilight Covenant",
+    "image": "22.jpg",
+    "genre": "fantasy",
+    "rating": "7.8"
+  },
+  {
+    "id": 23,
+    "title": "Fragments of Silence",
+    "image": "23.jpg",
+    "genre": "drama",
+    "rating": "6.7"
+  },
+  {
+    "id": 24,
+    "title": "The Iron Mirage",
+    "image": "24.jpg",
+    "genre": "action",
+    "rating": "8.2"
+  },
+  {
+    "id": 25,
+    "title": "Haunting Veins",
+    "image": "25.jpg",
+    "genre": "horror",
+    "rating": "7.0"
+  },
+  {
+    "id": 26,
+    "title": "Echofall",
+    "image": "26.jpg",
+    "genre": "drama",
+    "rating": "9.0"
+  },
+  {
+    "id": 27,
+    "title": "Kingdom of Embers",
+    "image": "27.jpg",
+    "genre": "fantasy",
+    "rating": "8.1"
+  },
+  {
+    "id": 28,
+    "title": "Vortex Protocol",
+    "image": "28.jpg",
+    "genre": "action",
+    "rating": "9.2"
+  },
+  {
+    "id": 29,
+    "title": "Whispers Beneath",
+    "image": "29.jpg",
+    "genre": "horror",
+    "rating": "6.8"
+  },
+  {
+    "id": 30,
+    "title": "Ashen Skies",
+    "image": "30.jpg",
+    "genre": "drama",
+    "rating": "7.9"
+  },
+  {
+    "id": 31,
+    "title": "Chronicles of Ember",
+    "image": "31.jpg",
+    "genre": "fantasy",
+    "rating": "8.5"
+  },
+  {
+    "id": 32,
+    "title": "The Hollow Siege",
+    "image": "32.jpg",
+    "genre": "action",
+    "rating": "7.1"
+  },
+  {
+    "id": 33,
+    "title": "The Frozen Waltz",
+    "image": "33.jpg",
+    "genre": "drama",
+    "rating": "6.4"
+  },
+  {
+    "id": 34,
+    "title": "Serpent's Oath",
+    "image": "34.jpg",
+    "genre": "fantasy",
+    "rating": "9.0"
+  },
+  {
+    "id": 35,
+    "title": "Black Horizon",
+    "image": "35.jpg",
+    "genre": "action",
+    "rating": "8.3"
+  },
+  {
+    "id": 36,
+    "title": "Echoes of the Abyss",
+    "image": "36.jpg",
+    "genre": "horror",
+    "rating": "7.9"
+  },
+  {
+    "id": 37,
+    "title": "The Silent Accord",
+    "image": "37.jpg",
+    "genre": "drama",
+    "rating": "8.0"
+  },
+  {
+    "id": 38,
+    "title": "Riftwalker",
+    "image": "38.jpg",
+    "genre": "fantasy",
+    "rating": "9.4"
+  },
+  {
+    "id": 39,
+    "title": "Steelheart Rising",
+    "image": "39.jpg",
+    "genre": "action",
+    "rating": "7.8"
+  },
+  {
+    "id": 40,
+    "title": "Cradle of Dread",
+    "image": "40.jpg",
+    "genre": "horror",
+    "rating": "8.7"
   }
 ]
