@@ -10,12 +10,21 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [watchlist, setWatchlist] = useState([]);
 
   useEffect(() => {
     fetch("https://api.jsonbin.io/v3/b/69162d89d0ea881f40e6a7c4")
       .then((response) => response.json())
       .then((data) => setMovies(data.record));
   }, []);
+
+  const toggleWatchlist = (movieId) => {
+    setWatchlist((prev) =>
+      prev.includes(movieId)
+        ? prev.filter((id) => id !== movieId) // This returns a new list containing every id EXCEPT the one equal to movieId.
+        : [...prev, movieId]
+    );
+  };
 
   return (
     <div className="App">
