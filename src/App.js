@@ -6,8 +6,17 @@ import Footer from "./components/Footer";
 import MoviesGrid from "./components/MoviesGrid";
 import Watchlist from "./components/Watchlist";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.jsonbin.io/v3/b/69162d89d0ea881f40e6a7c4")
+      .then((response) => response.json())
+      .then((data) => setMovies(data.record));
+  }, []);
+
   return (
     <div className="App">
       <div className="container">
@@ -26,7 +35,7 @@ function App() {
           </nav>
 
           <Routes>
-            <Route path="/" element={<MoviesGrid />}></Route>
+            <Route path="/" element={<MoviesGrid movies={movies} />}></Route>
             <Route path="/watchlist" element={<Watchlist />}></Route>
           </Routes>
         </Router>
