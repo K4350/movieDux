@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles.css";
-import Watchlist from "./Watchlist";
+import { Link } from "react-router-dom";
 
 export default function MovieCard({ movie, isWatchlisted, toggleWatchlist }) {
   const handleError = (e) => {
@@ -16,11 +16,14 @@ export default function MovieCard({ movie, isWatchlisted, toggleWatchlist }) {
 
   return (
     <div key={movie.id} className="movie-card">
-      <img
-        src={`images/${movie.image}`}
-        alt={movie.title}
-        onError={handleError}
-      />
+      <Link to={`/movie/${movie.id}`} className="card-link">
+        <img
+          src={`images/${movie.image}`}
+          alt={movie.title}
+          onError={handleError}
+        />
+      </Link>
+
       <div className="movie-card-info">
         <h3 className="movie-card-title">{movie.title}</h3>
         <div>

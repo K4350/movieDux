@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "./styles.css";
 import Header from "./components/Header";
@@ -7,6 +6,7 @@ import MoviesGrid from "./components/MoviesGrid";
 import Watchlist from "./components/Watchlist";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import MovieDetails from "./components/MovieDetails";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -64,6 +64,10 @@ function App() {
                 />
               }
             ></Route>
+            <Route
+              path="/movie/:id"
+              element={<MovieDetails movies={movies} />}
+            />
           </Routes>
         </Router>
       </div>
