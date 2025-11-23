@@ -1,70 +1,173 @@
-# Getting Started with Create React App
+# 🎬 **MovieDux — React Movie Explorer App**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MovieDux is a React-based movie browsing application where users can:
 
-## Available Scripts
+* ✅ Explore movies
+* ✅ Filter by genre & rating
+* ✅ Search by title
+* ✅ View detailed movie pages
+* ✅ Add/remove movies from a Watchlist
+* ✅ Navigate through pages with React Router
+* ✅ Fetch movie data from an external API
+* ✅ Enjoy a clean, modern UI
+* ✅ View the live site hosted on Firebase
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 **Live Demo**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔗 **[https://moviedux-43.web.app](https://moviedux-43.web.app)**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧠 **Features**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📌 **1. Movie List Page**
 
-### `npm run build`
+* Displays a grid of movies
+* Fetches data from JSONBin API
+* Includes:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  * Search bar
+  * Genre filter
+  * Rating filter
+  * Watchlist toggle
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ⭐ **2. Watchlist**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Users can store movies in their Watchlist
+* Toggle watchlist from Home page or Details page
+* Shows message/image if Watchlist is empty
 
-### `npm run eject`
+### 🎥 **3. Movie Details Page**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Dynamic route: `/movie/:id`
+* Shows poster, rating, genre, and description
+* Automatically loads correct movie based on URL
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🌐 **4. React Router**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Routes:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* `/` → Movie Grid
+* `/watchlist` → Watchlist Page
+* `/movie/:id` → Movie Details
 
-## Learn More
+### ☁️ **5. Hosted Online (Firebase Hosting)**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Project built with `npm run build`
+* Deployed using `firebase deploy`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🛠 **Tech Stack**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Technology            | Purpose                |
+| --------------------- | ---------------------- |
+| **React.js**          | UI and component logic |
+| **React Router**      | Page navigation        |
+| **CSS**               | Styling                |
+| **JSONBin.io API**    | Movie data             |
+| **Firebase Hosting**  | Deployment             |
+| **JavaScript (ES6+)** | Language               |
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📁 **Project Structure**
 
-### Making a Progressive Web App
+```
+/src
+  /components
+    Header.js
+    Footer.js
+    MovieCard.js
+    MoviesGrid.js
+    MovieDetails.js
+    Watchlist.js
+  App.js
+  App.css
+  styles.css
+/public
+  images/
+  index.html
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## ⚙️ **Setup & Installation**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 🔧 Install dependencies:
 
-### Deployment
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### ▶ Run development server:
 
-### `npm run build` fails to minify
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 🏗 Build for production:
+
+```bash
+npm run build
+```
+
+### ☁️ Deploy to Firebase:
+
+```bash
+firebase deploy
+```
+
+---
+
+## 🔌 **API**
+
+Movie data is fetched from JSONBin:
+
+```
+https://api.jsonbin.io/v3/b/69162d89d0ea881f40e6a7c4
+```
+
+---
+
+## 🧩 **Key Code Concepts**
+
+### 🔹 Fetching movies:
+
+```jsx
+useEffect(() => {
+  fetch("API_URL")
+    .then(res => res.json())
+    .then(data => setMovies(data.record));
+}, []);
+```
+
+### 🔹 Watchlist toggle logic:
+
+```jsx
+setWatchlist(prev =>
+  prev.includes(id)
+    ? prev.filter(item => item !== id)
+    : [...prev, id]
+);
+```
+
+### 🔹 Dynamic routing:
+
+```jsx
+<Route path="/movie/:id" element={<MovieDetails movies={movies} />} />
+```
+
+### 🔹 Reading URL parameters:
+
+```jsx
+const { id } = useParams();
+```
+
+---
+
+## 👨‍💻 **Author**
+
+**Kaushik Baruah**
