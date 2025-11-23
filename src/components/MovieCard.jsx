@@ -1,12 +1,9 @@
 import React from "react";
 import "../styles.css";
 import { Link } from "react-router-dom";
+import { handleImageError } from "../utils/imageUtils";
 
 export default function MovieCard({ movie, isWatchlisted, toggleWatchlist }) {
-  const handleError = (e) => {
-    e.target.src = "images/default.jpg";
-  };
-
   const getRatingClass = (rating) => {
     if (rating >= 8) return "rating-good";
 
@@ -20,7 +17,7 @@ export default function MovieCard({ movie, isWatchlisted, toggleWatchlist }) {
         <img
           src={`images/${movie.image}`}
           alt={movie.title}
-          onError={handleError}
+          onError={handleImageError}
         />
       </Link>
 

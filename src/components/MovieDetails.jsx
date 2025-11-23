@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "../styles.css";
+import { handleImageError } from "../utils/imageUtils";
 
 export default function MovieDetails({ movies }) {
   const { id } = useParams(); // get id from URL
@@ -14,6 +15,7 @@ export default function MovieDetails({ movies }) {
         src={`/images/${movie.image}`}
         alt={movie.title}
         className="details-poster"
+        onError={handleImageError}
       />
 
       <div className="details-info">
