@@ -13,9 +13,18 @@ function App() {
   const [watchlist, setWatchlist] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.jsonbin.io/v3/b/69162d89d0ea881f40e6a7c4")
-      .then((response) => response.json())
-      .then((data) => setMovies(data.record));
+    async function getData() {
+      try {
+        const response = await fetch(
+          "https://api.jsonbin.io/v3/b/69162d89d0ea881f40e6a7c4"
+        );
+        const data = await response.json();
+        setMovies(data.record);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+    getData();
   }, []);
 
   const toggleWatchlist = (movieId) => {
